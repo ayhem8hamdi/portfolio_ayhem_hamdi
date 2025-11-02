@@ -6,12 +6,14 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        "Desktop layout",
-        style: AppStyles.style20Bold(
-          context,
-        ).copyWith(color: Color(0XFF000000)),
+    return SafeArea(
+      child: Center(
+        child: Text(
+          "Desktop layout",
+          style: AppStyles.style20Bold(
+            context,
+          ).copyWith(color: Color(0XFF000000)),
+        ),
       ),
     );
   }
