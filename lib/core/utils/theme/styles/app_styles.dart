@@ -3,13 +3,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/size_config.dart';
 
 abstract class AppStyles {
-  static final TextStyle baseMontserrat = GoogleFonts.montserrat();
+  static final TextStyle baseSora = GoogleFonts.sora();
   static TextStyle style20Bold(
     BuildContext context, {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontWeight: FontWeight.bold,
       color: color,
@@ -22,7 +22,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 32),
       fontWeight: FontWeight.bold,
       color: color,
@@ -35,7 +35,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 12),
       fontWeight: FontWeight.w600,
       color: color,
@@ -48,7 +48,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.w600,
       color: color,
@@ -61,7 +61,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontWeight: FontWeight.w600,
       color: color,
@@ -74,7 +74,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 28),
       fontWeight: FontWeight.w600,
       color: color,
@@ -87,7 +87,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 20),
       fontWeight: FontWeight.w800,
       color: color,
@@ -100,7 +100,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 24),
       fontWeight: FontWeight.w600,
       color: color,
@@ -113,7 +113,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 24),
       fontWeight: FontWeight.w800,
       color: color,
@@ -126,7 +126,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 16),
       fontWeight: FontWeight.normal,
       color: color,
@@ -139,7 +139,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 48),
       fontWeight: FontWeight.w800,
       color: color,
@@ -152,7 +152,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 48),
       fontWeight: FontWeight.w400,
       color: color,
@@ -165,7 +165,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 28),
       fontWeight: FontWeight.w800,
       color: color,
@@ -178,7 +178,7 @@ abstract class AppStyles {
     Color? color,
     double? height,
   }) {
-    return baseMontserrat.copyWith(
+    return baseSora.copyWith(
       fontSize: getResponsiveFontSize(context, fontSize: 28),
       fontWeight: FontWeight.normal,
       color: color,
