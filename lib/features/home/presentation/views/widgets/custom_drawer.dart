@@ -34,6 +34,14 @@ class CustomDrawerBody extends StatelessWidget {
         DrawerCustomDivider(),
         SliverGap(22),
         DrawerCustomNavLinks(),
+        SliverGap(28),
+        SliverFillRemaining(
+          hasScrollBody: false,
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: DownloadResumeButton(),
+          ),
+        ),
       ],
     );
   }
@@ -58,7 +66,9 @@ class CustomDrawerHeader extends StatelessWidget {
             ),
             Spacer(),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               icon: Icon(Icons.close, color: cs.primary),
             ),
             Gap(2),
@@ -88,19 +98,19 @@ class DrawerCustomNavLinks extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SliverToBoxAdapter(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 30),
+        padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             HoverLinkText(text: "About me"),
-            Gap(30),
+            Gap(16),
             HoverLinkText(text: "Skills"),
-            Gap(30),
+            Gap(16),
             HoverLinkText(text: "Experience"),
-            Gap(30),
+            Gap(16),
             HoverLinkText(text: "Project"),
-            Gap(30),
+            Gap(16),
             HoverLinkText(text: "Contact me"),
           ],
         ),
@@ -120,6 +130,43 @@ class HoverLinkText extends StatelessWidget {
       child: Text(
         text,
         style: AppStyles.style16SemiBold(context).copyWith(color: Colors.black),
+      ),
+    );
+  }
+}
+
+class DownloadResumeButton extends StatelessWidget {
+  const DownloadResumeButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final cs = Theme.of(context).colorScheme;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Container(
+        decoration: BoxDecoration(
+          color: cs.primary,
+          borderRadius: BorderRadius.circular(4),
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 16),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Resume",
+                style: AppStyles.style16SemiBold(
+                  context,
+                ).copyWith(color: cs.onPrimary),
+              ),
+              Gap(8),
+              SvgPicture.asset(
+                AppAssets.download,
+                colorFilter: ColorFilter.mode(cs.onPrimary, BlendMode.srcIn),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }

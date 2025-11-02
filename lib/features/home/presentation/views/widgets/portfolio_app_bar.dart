@@ -5,20 +5,18 @@ import 'package:portfolio_ayhem_hamdi/core/utils/assets/app_assets.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/app_styles.dart';
 
 PreferredSizeWidget buildSmallScreenAppBar(BuildContext context) {
+  final cs = Theme.of(context).colorScheme;
   return AppBar(
     toolbarHeight: 70,
-    backgroundColor: Theme.of(context).colorScheme.secondary,
-    surfaceTintColor: Theme.of(context).colorScheme.secondary,
+    backgroundColor: cs.secondary,
+    surfaceTintColor: cs.secondary,
     title: Row(
       children: [
         SvgPicture.asset(AppAssets.logo),
         const Gap(12),
         Text(
           "Personal",
-          style: AppStyles.style20Bold(
-            context,
-            color: Theme.of(context).colorScheme.primary,
-          ),
+          style: AppStyles.style20Bold(context, color: cs.primary),
         ),
       ],
     ),
@@ -26,7 +24,7 @@ PreferredSizeWidget buildSmallScreenAppBar(BuildContext context) {
       Builder(
         builder: (context) {
           return IconButton(
-            icon: const Icon(Icons.menu, size: 32),
+            icon: Icon(Icons.menu, size: 32, color: cs.primary),
             onPressed: () {
               Scaffold.of(context).openEndDrawer();
             },
