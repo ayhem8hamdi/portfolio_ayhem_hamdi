@@ -17,10 +17,7 @@ class HomeScreen extends StatelessWidget {
           ? null
           : buildSmallScreenAppBar(context),
       endDrawer: width < SizeConfig.pcBreakPoint ? const CustomDrawer() : null,
-      body: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16),
-        child: HomeScreenBody(),
-      ),
+      body: HomeScreenBody(),
     );
   }
 }

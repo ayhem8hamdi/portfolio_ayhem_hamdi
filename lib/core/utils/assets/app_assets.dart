@@ -20,6 +20,7 @@ abstract class AppAssets {
   static const String supabase = '${_imagesBasePath}supabase-icon.svg';
   static const String js = '${_imagesBasePath}js.svg';
   static const String swagger = '${_imagesBasePath}swagger.svg';
+  static const String freelance = '${_imagesBasePath}freelancer.png';
   // icons
   static const String download = '${_iconBasePath}download.svg';
   static const String facebook = '${_iconBasePath}fb.svg';

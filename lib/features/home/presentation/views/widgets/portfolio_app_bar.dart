@@ -10,15 +10,18 @@ PreferredSizeWidget buildSmallScreenAppBar(BuildContext context) {
     toolbarHeight: 70,
     backgroundColor: cs.secondary,
     surfaceTintColor: cs.secondary,
-    title: Row(
-      children: [
-        SvgPicture.asset(AppAssets.logo),
-        const Gap(12),
-        Text(
-          "Personal",
-          style: AppStyles.style20Bold(context, color: cs.primary),
-        ),
-      ],
+    title: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Row(
+        children: [
+          SvgPicture.asset(AppAssets.logo),
+          const Gap(12),
+          Text(
+            "Personal",
+            style: AppStyles.style20Bold(context, color: cs.primary),
+          ),
+        ],
+      ),
     ),
     actions: [
       Builder(

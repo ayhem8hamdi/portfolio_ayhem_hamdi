@@ -10,16 +10,19 @@ class MobileWelcomSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          MobileBanner(),
-          const Gap(48),
-          MobileLayoutWelcomeText(),
-          const Gap(32),
-          CustomContactIconsSection(),
-        ],
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            MobileBanner(),
+            const Gap(48),
+            MobileLayoutWelcomeText(),
+            const Gap(32),
+            CustomContactIconsSection(),
+          ],
+        ),
       ),
     );
   }

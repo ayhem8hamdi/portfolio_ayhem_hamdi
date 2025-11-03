@@ -11,7 +11,10 @@ class SkillsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
-      child: Column(children: [MySkillsTitle(), Gap(40), SkillGrid()]),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(children: [MySkillsTitle(), Gap(40), SkillGrid()]),
+      ),
     );
   }
 }
@@ -99,6 +102,7 @@ class SkillItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           AdaptiveImage(
+            color: cs.primary,
             assetPath: skillModel.skillImage,
             imageDesignWidth: 64,
             imageDesignAspectRatio: 1,
