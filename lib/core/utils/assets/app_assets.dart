@@ -18,6 +18,8 @@ abstract class AppAssets {
   static const String mongoDb = '${_imagesBasePath}mongodb.svg';
   static const String nodeJs = '${_imagesBasePath}nodejs.svg';
   static const String supabase = '${_imagesBasePath}supabase-icon.svg';
+  static const String js = '${_imagesBasePath}js.svg';
+  static const String swagger = '${_imagesBasePath}swagger.svg';
   // icons
   static const String download = '${_iconBasePath}download.svg';
   static const String facebook = '${_iconBasePath}fb.svg';

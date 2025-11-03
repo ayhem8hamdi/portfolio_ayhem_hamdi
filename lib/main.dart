@@ -6,7 +6,7 @@ import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/home_scre
 void main() {
   runApp(
     DevicePreview(
-      enabled: false,
+      enabled: true,
       builder: (context) => const PortfolioAyhemHamdi(),
     ),
   );
