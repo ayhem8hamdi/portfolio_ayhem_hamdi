@@ -166,8 +166,8 @@ abstract class AppStyles {
     double? height,
   }) {
     return baseSora.copyWith(
-      fontSize: getResponsiveFontSize(context, fontSize: 28),
-      fontWeight: FontWeight.w800,
+      fontSize: getResponsiveFontSize(context, fontSize: 32),
+      fontWeight: FontWeight.w900,
       color: color,
       height: height,
     );
@@ -203,7 +203,7 @@ double getScaleFactor(BuildContext context) {
   double width = MediaQuery.sizeOf(context).width;
 
   if (width < SizeConfig.mobileBreakPoint) {
-    return width / 700;
+    return width / 825;
   } else if (width < SizeConfig.tabletBreakPoint) {
     return width / 1150;
   } else {

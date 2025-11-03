@@ -17,9 +17,9 @@ class AdaptiveLayoutWidget extends StatelessWidget {
       builder: (context, constrains) {
         log('constrains ${constrains.maxWidth}');
         log('media : ${MediaQuery.of(context).size.width}');
-        if (constrains.maxWidth < SizeConfig.mobileBreakPoint) {
+        if (constrains.maxWidth + 32 < SizeConfig.mobileBreakPoint) {
           return mobileLayout(context);
-        } else if (constrains.maxWidth < SizeConfig.tabletBreakPoint) {
+        } else if (constrains.maxWidth + 32 < SizeConfig.tabletBreakPoint) {
           return tabletLayout(context);
         } else {
           return desktopLayout(context);

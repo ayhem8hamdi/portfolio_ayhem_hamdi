@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: width > SizeConfig.pcBreakPoint
+      appBar: width >= SizeConfig.tabletBreakPoint
           ? null
           : buildSmallScreenAppBar(context),
       endDrawer: width < SizeConfig.pcBreakPoint ? const CustomDrawer() : null,
