@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio_ayhem_hamdi/core/utils/theme/colors/app_colors.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/colors/light_colors.dart';
 
 class AppTheme {
@@ -50,5 +51,7 @@ class ThemeColorScheme {
     onError: Colors.black,
     surface: AppLightColors.surfaceColor,
     onSurface: AppLightColors.onSurfaceColor,
+    primaryContainer: AppColors.kPrimaryContainer,
+    onPrimaryContainer: AppColors.kOnPrimaryContainer,
   );
 }

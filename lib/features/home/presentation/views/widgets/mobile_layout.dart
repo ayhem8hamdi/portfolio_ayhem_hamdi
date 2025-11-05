@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:portfolio_ayhem_hamdi/core/utils/assets/app_assets.dart';
-import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/adaptive_image.dart';
-import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/app_styles.dart';
+import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/about_me_section.dart';
+import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/experience_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/mobile_layout_welcome_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/skills_section.dart';
 
@@ -20,92 +19,9 @@ class MobileLayout extends StatelessWidget {
           SkillsSection(),
           SliverGap(40),
           MyExperiencesSection(),
+          AboutMeSection(),
+          SliverGap(40),
         ],
-      ),
-    );
-  }
-}
-
-class MyExperiencesSection extends StatelessWidget {
-  const MyExperiencesSection({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    final ColorScheme cs = Theme.of(context).colorScheme;
-    return SliverToBoxAdapter(
-      child: Container(
-        color: cs.primary,
-        child: Column(
-          children: [
-            Gap(40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("My", style: AppStyles.style28Regular(context)),
-                Gap(12),
-                Text("Experience", style: AppStyles.style28ExtraBold(context)),
-              ],
-            ),
-            Gap(40),
-            ExperienceItem(color: Colors.black),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class ExperienceItem extends StatelessWidget {
-  const ExperienceItem({super.key, required this.color});
-  final Color color;
-  @override
-  Widget build(BuildContext context) {
-    final ColorScheme cs = Theme.of(context).colorScheme;
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 24, vertical: 30),
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(10),
-          border: Border.all(color: cs.onSurface),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                AdaptiveImage(
-                  assetPath: AppAssets.freelance,
-                  imageDesignWidth: 32,
-
-                  imageDesignAspectRatio: 1,
-                ),
-                Gap(16),
-                Text(
-                  "Independent Freelancer",
-                  style: AppStyles.style24SemiBold(
-                    context,
-                  ).copyWith(color: cs.secondary),
-                ),
-              ],
-            ),
-            Gap(20),
-            Text(
-              "2024-present",
-              style: AppStyles.style16SemiBold(
-                context,
-              ).copyWith(color: cs.onSurface),
-            ),
-            Gap(26),
-            Text(
-              "In 2024, I began my freelance journey, working with clients worldwide to bring their ideas to life. I develop mobile apps and custom solutions across various categories, with a steadfast focus on quality, functionality, and user experience. My passion is creating impactful applications that consistently exceed expectations.",
-              style: AppStyles.style16Regular(
-                context,
-              ).copyWith(color: cs.onSurface),
-            ),
-          ],
-        ),
       ),
     );
   }
