@@ -78,17 +78,32 @@ class ExperienceItem extends StatelessWidget {
                 AdaptiveImage(
                   assetPath: AppAssets.freelance,
                   imageDesignWidth: 32,
+
                   imageDesignAspectRatio: 1,
                 ),
                 Gap(16),
                 Text(
                   "Independent Freelancer",
-                  style: AppStyles.style24SemiBold(context),
+                  style: AppStyles.style24SemiBold(
+                    context,
+                  ).copyWith(color: cs.secondary),
                 ),
               ],
             ),
             Gap(20),
-            Text("2024-present", style: AppStyles.style16SemiBold(context)),
+            Text(
+              "2024-present",
+              style: AppStyles.style16SemiBold(
+                context,
+              ).copyWith(color: cs.onSurface),
+            ),
+            Gap(26),
+            Text(
+              "In 2024, I began my freelance journey, working with clients worldwide to bring their ideas to life. I develop mobile apps and custom solutions across various categories, with a steadfast focus on quality, functionality, and user experience. My passion is creating impactful applications that consistently exceed expectations.",
+              style: AppStyles.style16Regular(
+                context,
+              ).copyWith(color: cs.onSurface),
+            ),
           ],
         ),
       ),
