@@ -22,6 +22,20 @@ abstract class AppAssets {
   static const String swagger = '${_imagesBasePath}swagger.svg';
   static const String freelance = '${_imagesBasePath}freelancer.png';
   static const String codex = '${_imagesBasePath}logo_codex.png';
+  static const String weatherApp = '${_imagesBasePath}weather_app_banner.png';
+  static const String notesApp = '${_imagesBasePath}notes_app_banner.png';
+  static const String newsCloud = '${_imagesBasePath}news_cloud_banner.png';
+  static const String jobsApi = '${_imagesBasePath}jobs_api_banner.png';
+  static const String fruitHub = '${_imagesBasePath}fruit_hub_banner.png';
+  static const String codexLogo1 = '${_imagesBasePath}codex_logo_1.png';
+  static const String codexLogo2 = '${_imagesBasePath}codex_logo_2.png';
+  static const String chatbot = '${_imagesBasePath}chatbot_banner.png';
+  static const String bookly = '${_imagesBasePath}bookly_banner.png';
+  static const String bankPick = '${_imagesBasePath}bank_pick_banner.png';
+  static const String dashboard =
+      '${_imagesBasePath}admin_dashboard_banner.png';
+  static const String certif4C = '${_imagesBasePath}4c_certif_banner.png';
+
   // icons
   static const String download = '${_iconBasePath}download.svg';
   static const String facebook = '${_iconBasePath}fb.svg';
