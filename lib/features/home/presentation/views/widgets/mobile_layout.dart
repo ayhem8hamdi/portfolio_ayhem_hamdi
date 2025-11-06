@@ -30,7 +30,27 @@ class MobileLayout extends StatelessWidget {
           SliverGap(40),
           MyProjectsSection(),
           SliverGap(40),
+          ContactMeSection(),
         ],
+      ),
+    );
+  }
+}
+
+class ContactMeSection extends StatelessWidget {
+  const ContactMeSection({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width;
+    return SliverToBoxAdapter(
+      child: Container(
+        color: Theme.of(context).colorScheme.secondary,
+        padding: EdgeInsets.symmetric(horizontal: width * 0.04),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [GetInTouchForm()],
+        ),
       ),
     );
   }
@@ -85,26 +105,26 @@ class _GetInTouchFormState extends State<GetInTouchForm> {
           const Gap(20),
           CustomTextField(
             hint: "Email",
-            controller: _nameController,
+            controller: _emailController,
             validator: (value) => MethodsHelper.validateName(value),
           ),
           const Gap(20),
           CustomTextField(
             hint: "Subject",
-            controller: _nameController,
+            controller: _subjectController,
             validator: (value) => MethodsHelper.validateName(value),
           ),
           const Gap(20),
-          CustomTextField(
+          HelpTextField(
             hint: "How can I help?*",
-            controller: _nameController,
+            controller: _helpController,
             validator: (value) => MethodsHelper.validateName(value),
           ),
-          const Gap(37),
-          LoginButtonBlocConsumer(
+          const Gap(20),
+          /*LoginButtonBlocConsumer(
             text: 'تسجيل دخول',
             onLoginPressed: _getInTouchPressed,
-          ),
+          ),*/
         ],
       ),
     );
