@@ -1,5 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+
 import 'package:gap/gap.dart';
+import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/custom_text_field.dart';
+import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/methods_helper.dart';
+
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/about_me_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/experience_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/mobile_layout_welcome_section.dart';
@@ -24,6 +30,81 @@ class MobileLayout extends StatelessWidget {
           SliverGap(40),
           MyProjectsSection(),
           SliverGap(40),
+        ],
+      ),
+    );
+  }
+}
+
+class GetInTouchForm extends StatefulWidget {
+  const GetInTouchForm({super.key});
+
+  @override
+  State<GetInTouchForm> createState() => _GetInTouchFormState();
+}
+
+class _GetInTouchFormState extends State<GetInTouchForm> {
+  final _formKey = GlobalKey<FormState>();
+  final _nameController = TextEditingController();
+  final _emailController = TextEditingController();
+  final _subjectController = TextEditingController();
+  final _helpController = TextEditingController();
+
+  @override
+  void dispose() {
+    _emailController.dispose();
+    _nameController.dispose();
+    _subjectController.dispose();
+    _helpController.dispose();
+    super.dispose();
+  }
+
+  void _getInTouchPressed() {
+    if (_formKey.currentState?.validate() ?? false) {
+      final email = _emailController.text.trim();
+      final name = _nameController.text.trim();
+      final subject = _subjectController.text.trim();
+      final help = _helpController.text.trim();
+      //send notif logic from cubit
+      log("$email & $name & $subject & $help");
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Form(
+      key: _formKey,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          CustomTextField(
+            hint: "Your name",
+            controller: _nameController,
+            validator: (value) => MethodsHelper.validateName(value),
+          ),
+          const Gap(20),
+          CustomTextField(
+            hint: "Email",
+            controller: _nameController,
+            validator: (value) => MethodsHelper.validateName(value),
+          ),
+          const Gap(20),
+          CustomTextField(
+            hint: "Subject",
+            controller: _nameController,
+            validator: (value) => MethodsHelper.validateName(value),
+          ),
+          const Gap(20),
+          CustomTextField(
+            hint: "How can I help?*",
+            controller: _nameController,
+            validator: (value) => MethodsHelper.validateName(value),
+          ),
+          const Gap(37),
+          LoginButtonBlocConsumer(
+            text: 'تسجيل دخول',
+            onLoginPressed: _getInTouchPressed,
+          ),
         ],
       ),
     );
