@@ -77,7 +77,7 @@ class HelpTextField extends StatelessWidget {
           errorBorder: MethodsHelper.buildErrorBorder(context),
           focusedErrorBorder: MethodsHelper.buildErrorBorder(context),
           contentPadding: const EdgeInsets.symmetric(
-            vertical: 15.0,
+            vertical: 25.0,
             horizontal: 10.0,
           ),
         ),

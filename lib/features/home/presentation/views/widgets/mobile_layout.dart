@@ -3,12 +3,14 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import 'package:gap/gap.dart';
+import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/custom_button.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/custom_text_field.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/methods_helper.dart';
 
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/about_me_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/experience_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/mobile_layout_welcome_section.dart';
+import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/mobile_social_contact_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/my_projects_mobile_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/skills_section.dart';
 
@@ -49,7 +51,12 @@ class ContactMeSection extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: width * 0.04),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: [GetInTouchForm()],
+          children: [
+            GetInTouchForm(),
+            Gap(20),
+            CustomContactIconsSection(padding: 0),
+            Gap(35),
+          ],
         ),
       ),
     );
@@ -95,7 +102,7 @@ class _GetInTouchFormState extends State<GetInTouchForm> {
     return Form(
       key: _formKey,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomTextField(
             hint: "Your name",
@@ -121,10 +128,13 @@ class _GetInTouchFormState extends State<GetInTouchForm> {
             validator: (value) => MethodsHelper.validateName(value),
           ),
           const Gap(20),
-          /*LoginButtonBlocConsumer(
-            text: 'تسجيل دخول',
-            onLoginPressed: _getInTouchPressed,
-          ),*/
+
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CustomButton(text: "Get in Touch", onPressed: _getInTouchPressed),
+            ],
+          ),
         ],
       ),
     );

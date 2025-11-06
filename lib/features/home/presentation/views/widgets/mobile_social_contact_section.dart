@@ -4,12 +4,12 @@ import 'package:gap/gap.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/assets/app_assets.dart';
 
 class CustomContactIconsSection extends StatelessWidget {
-  const CustomContactIconsSection({super.key});
-
+  const CustomContactIconsSection({super.key, this.padding});
+  final double? padding;
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
+      padding: EdgeInsets.symmetric(horizontal: padding ?? 16),
       child: Row(
         children: [
           Expanded(
