@@ -8,6 +8,7 @@ import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/custom_text_fi
 import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/methods_helper.dart';
 
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/about_me_section.dart';
+import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/contact_me.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/experience_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/mobile_layout_welcome_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/mobile_social_contact_section.dart';
@@ -56,6 +57,7 @@ class ContactMeSection extends StatelessWidget {
             Gap(20),
             CustomContactIconsSection(padding: 0),
             Gap(35),
+            ContactInfo(),
           ],
         ),
       ),
