@@ -207,6 +207,6 @@ double getScaleFactor(BuildContext context) {
   } else if (width < SizeConfig.tabletBreakPoint) {
     return width / 1290;
   } else {
-    return width / 1400;
+    return width / 1560;
   }
 }

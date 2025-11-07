@@ -5,6 +5,8 @@ import 'package:gap/gap.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/custom_button.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/custom_text_field.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/methods_helper.dart';
+import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/contact_me.dart';
+import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/footer_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/mobile_social_contact_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/tablet_about_me.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/tablet_my_experience_section.dart';
@@ -32,6 +34,8 @@ class TabletLayout extends StatelessWidget {
           TabletMyProjectsSection(),
           SliverGap(80),
           TabletContactMeSection(),
+          SliverGap(90),
+          FooterSection(),
         ],
       ),
     );
@@ -50,8 +54,8 @@ class TabletContactMeSection extends StatelessWidget {
         child: Row(
           children: [
             Expanded(child: TabletGetInTouchForm()),
-            Gap(25),
-            Spacer(),
+            Gap(55),
+            Expanded(child: ContactInfo()),
           ],
         ),
       ),

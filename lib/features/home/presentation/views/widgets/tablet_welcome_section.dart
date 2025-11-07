@@ -21,6 +21,7 @@ class TabletWelcomeSection extends StatelessWidget {
               child: IntrinsicWidth(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const FittedBox(
                       fit: BoxFit.scaleDown,
