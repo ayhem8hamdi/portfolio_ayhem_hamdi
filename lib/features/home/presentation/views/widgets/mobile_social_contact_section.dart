@@ -28,7 +28,8 @@ class CustomContactIconsSection extends StatelessWidget {
 }
 
 class CustomContactIconRow extends StatelessWidget {
-  const CustomContactIconRow({super.key});
+  const CustomContactIconRow({super.key, this.gap});
+  final double? gap;
 
   @override
   Widget build(BuildContext context) {
@@ -38,17 +39,17 @@ class CustomContactIconRow extends StatelessWidget {
           cursor: SystemMouseCursors.click,
           child: SocialMediaIcon(image: AppAssets.linkedIn),
         ),
-        Gap(32),
+        Gap(gap ?? 32),
         MouseRegion(
           cursor: SystemMouseCursors.click,
           child: SocialMediaIcon(image: AppAssets.github),
         ),
-        Gap(32),
+        Gap(gap ?? 32),
         MouseRegion(
           cursor: SystemMouseCursors.click,
           child: SocialMediaIcon(image: AppAssets.facebook),
         ),
-        Gap(32),
+        Gap(gap ?? 32),
         MouseRegion(
           cursor: SystemMouseCursors.click,
           child: SocialMediaIcon(image: AppAssets.instagram),
