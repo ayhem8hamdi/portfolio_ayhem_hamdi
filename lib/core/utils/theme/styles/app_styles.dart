@@ -205,7 +205,7 @@ double getScaleFactor(BuildContext context) {
   if (width < SizeConfig.mobileBreakPoint) {
     return width / 825;
   } else if (width < SizeConfig.tabletBreakPoint) {
-    return width / 1150;
+    return width / 1290;
   } else {
     return width / 1400;
   }
