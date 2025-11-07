@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:portfolio_ayhem_hamdi/core/constants.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/app_styles.dart';
 
 class MobileLayoutWelcomeText extends StatelessWidget {
@@ -25,7 +26,7 @@ class MobileLayoutWelcomeText extends StatelessWidget {
                 ),
                 const Gap(16),
                 Text(
-                  "Ayhem Hamdi.",
+                  Constants.fullName,
                   style: AppStyles.style28ExtraBold(context, color: cs.primary),
                 ),
               ],
@@ -37,14 +38,14 @@ class MobileLayoutWelcomeText extends StatelessWidget {
             child: Row(
               children: [
                 Text(
-                  "Flutter",
+                  Constants.mainFrameWork,
                   style: AppStyles.style28ExtraBold(context, color: cs.primary),
                 ),
                 const Gap(16),
                 Stack(
                   children: <Widget>[
                     Text(
-                      'Developer',
+                      Constants.state,
                       style: AppStyles.style28ExtraBold(context).copyWith(
                         foreground: Paint()
                           ..style = PaintingStyle.stroke
@@ -53,7 +54,7 @@ class MobileLayoutWelcomeText extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      'Developer',
+                      Constants.state,
                       style: AppStyles.style28ExtraBold(
                         context,
                         color: cs.secondary,
@@ -76,7 +77,7 @@ class MobileLayoutWelcomeText extends StatelessWidget {
                 ),
                 const Gap(12),
                 Text(
-                  "Tunisia.",
+                  Constants.nationality,
                   style: AppStyles.style28ExtraBold(context, color: cs.primary),
                 ),
               ],
@@ -84,7 +85,7 @@ class MobileLayoutWelcomeText extends StatelessWidget {
           ),
           const Gap(32),
           Text(
-            "I am Ayhem Hamdi, a passionate Flutter developer from Tunisia, dedicated to building innovative and seamless mobile applications. My focus is on performance and user experience, bringing creative ideas to life with clean, efficient code. Let's build something extraordinary together.",
+            Constants.welcomeSectionIntroducition,
             style: AppStyles.style16Regular(
               context,
             ).copyWith(color: cs.tertiary),

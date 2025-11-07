@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:portfolio_ayhem_hamdi/core/constants.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/app_styles.dart';
 
 class TabletWelcomeText extends StatelessWidget {
@@ -22,7 +23,7 @@ class TabletWelcomeText extends StatelessWidget {
             ),
             const Gap(16),
             Text(
-              "Ayhem Hamdi.",
+              Constants.fullName,
               style: AppStyles.style48ExtraBold(
                 context,
                 color: Theme.of(context).colorScheme.primary,
@@ -33,7 +34,7 @@ class TabletWelcomeText extends StatelessWidget {
         Row(
           children: [
             Text(
-              "Flutter",
+              Constants.mainFrameWork,
               style: AppStyles.style48ExtraBold(
                 context,
                 color: Theme.of(context).colorScheme.primary,
@@ -44,7 +45,7 @@ class TabletWelcomeText extends StatelessWidget {
               children: <Widget>[
                 // Stroked text as border.
                 Text(
-                  'Developer',
+                  Constants.state,
                   style: AppStyles.style48ExtraBold(context).copyWith(
                     foreground: Paint()
                       ..style = PaintingStyle.stroke
@@ -54,7 +55,7 @@ class TabletWelcomeText extends StatelessWidget {
                 ),
                 // Solid text as fill.
                 Text(
-                  'Developer',
+                  Constants.state,
                   style: AppStyles.style48ExtraBold(
                     context,
                     color: Theme.of(context).colorScheme.secondary,
@@ -76,7 +77,7 @@ class TabletWelcomeText extends StatelessWidget {
             ),
             const Gap(16),
             Text(
-              "Tunisia.",
+              Constants.nationality,
               style: AppStyles.style48ExtraBold(
                 context,
                 color: Theme.of(context).colorScheme.primary,

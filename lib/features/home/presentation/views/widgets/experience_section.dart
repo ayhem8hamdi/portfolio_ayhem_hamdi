@@ -23,16 +23,15 @@ class MyExperiencesSection extends StatelessWidget {
               children: [
                 Text(
                   "My",
-                  style: AppStyles.style28Regular(
-                    context,
-                  ).copyWith(color: cs.secondary),
+                  style: AppStyles.style48Regular(context, color: cs.secondary),
                 ),
                 Gap(12),
                 Text(
                   "Experience",
-                  style: AppStyles.style28ExtraBold(
+                  style: AppStyles.style48ExtraBold(
                     context,
-                  ).copyWith(color: cs.secondary),
+                    color: cs.secondary,
+                  ),
                 ),
               ],
             ),
@@ -58,11 +57,11 @@ class ExperienceListBuilder extends StatelessWidget {
       expDate: "2024-Present",
     ),
     ExperienceModel(
-      image: AppAssets.freelance,
-      expTitle: "Flutter Senior",
+      image: AppAssets.codexLogo2,
+      expTitle: "Senior Flutter Developer ",
       expDesc:
-          "In 2024, I began my freelance journey, working with clients worldwide to bring their ideas to life. I develop mobile apps and custom solutions across various categories, with a steadfast focus on quality, functionality, and user experience. My passion is creating impactful applications that consistently exceed expectations.",
-      color: AppColors.kPrimaryContainer,
+          "Worked with Codex Junior Enterprise on real-world projects using Scrum methodology in a collaborative team environment. Designed and developed user-friendly Flutter UIs, integrated REST APIs, and contributed to backend development using Node.js. This experience enhanced my technical expertise, teamwork, and ability to deliver high-quality, scalable applications.",
+      color: AppColors.kPrimaryColor,
       expDate: "2024-Present",
     ),
   ];
@@ -102,7 +101,6 @@ class ExperienceItem extends StatelessWidget {
                 AdaptiveImage(
                   assetPath: experienceModel.image,
                   imageDesignWidth: 32,
-
                   imageDesignAspectRatio: 1,
                 ),
                 Gap(16),

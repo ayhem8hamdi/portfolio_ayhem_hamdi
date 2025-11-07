@@ -16,7 +16,7 @@ PreferredSizeWidget buildDesktopAppBar(BuildContext context) {
     elevation: 0,
     titleSpacing: 0,
     title: Padding(
-      padding: EdgeInsets.symmetric(horizontal: width * 0.04),
+      padding: EdgeInsets.symmetric(horizontal: width * 0.05),
       child: Row(
         children: [
           SvgPicture.asset(AppAssets.logo, height: 40),

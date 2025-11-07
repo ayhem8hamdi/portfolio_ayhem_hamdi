@@ -23,10 +23,7 @@ class TabletMyExperiencesSection extends StatelessWidget {
               children: [
                 Text(
                   "My",
-                  style: AppStyles.style48Regular(
-                    context,
-                    color: cs.secondary,
-                  ).copyWith(fontSize: 34),
+                  style: AppStyles.style48Regular(context, color: cs.secondary),
                 ),
                 Gap(12),
                 Text(
@@ -34,7 +31,7 @@ class TabletMyExperiencesSection extends StatelessWidget {
                   style: AppStyles.style48ExtraBold(
                     context,
                     color: cs.secondary,
-                  ).copyWith(fontSize: 36),
+                  ),
                 ),
               ],
             ),
@@ -60,7 +57,7 @@ class TabletExperienceListBuilder extends StatelessWidget {
       expDate: "2024-Present",
     ),
     ExperienceModel(
-      image: AppAssets.freelance,
+      image: AppAssets.codexLogo2,
       expTitle: "Flutter Senior",
       expDesc:
           "In 2024, I began my freelance journey, working with clients worldwide to bring their ideas to life. I develop mobile apps and custom solutions across various categories, with a steadfast focus on quality, functionality, and user experience. My passion is creating impactful applications that consistently exceed expectations.",
@@ -88,7 +85,7 @@ class TabletExperienceItem extends StatelessWidget {
     final ColorScheme cs = Theme.of(context).colorScheme;
     final double width = MediaQuery.sizeOf(context).width;
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: width * 0.04),
+      padding: EdgeInsets.symmetric(horizontal: width * 0.05),
       child: Container(
         margin: EdgeInsets.only(bottom: 30),
         padding: EdgeInsets.symmetric(horizontal: 24, vertical: 30),

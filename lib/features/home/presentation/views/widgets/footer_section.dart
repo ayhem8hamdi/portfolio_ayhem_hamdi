@@ -37,7 +37,7 @@ class FooterSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "@ 2025 Ayhem Hamdi",
+                  "© 2025 Ayhem Hamdi",
                   style: AppStyles.style16SemiBold(
                     context,
                     color: Theme.of(context).colorScheme.secondary,

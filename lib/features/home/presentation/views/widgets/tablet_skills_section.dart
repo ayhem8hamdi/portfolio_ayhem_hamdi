@@ -12,7 +12,7 @@ class TabletSkillsSection extends StatelessWidget {
     final double width = MediaQuery.sizeOf(context).width;
     return SliverToBoxAdapter(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: width * 0.04),
+        padding: EdgeInsets.symmetric(horizontal: width * 0.05),
         child: Column(children: [MySkillsTitle(), Gap(50), TabletSkillGrid()]),
       ),
     );
