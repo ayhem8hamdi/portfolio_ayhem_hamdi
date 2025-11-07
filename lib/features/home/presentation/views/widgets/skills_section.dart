@@ -41,9 +41,8 @@ class SkillGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
     return GridView.builder(
-      shrinkWrap: true, // 👈 necessary inside Column
-      physics:
-          const NeverScrollableScrollPhysics(), // 👈 prevents nested scroll
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: width <= 500 ? 2 : 3,
         crossAxisSpacing: width * 0.03,

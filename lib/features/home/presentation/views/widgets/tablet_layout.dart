@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/tablet_skills_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/tablet_welcome_section.dart';
 
 class TabletLayout extends StatelessWidget {
@@ -8,7 +9,15 @@ class TabletLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: CustomScrollView(slivers: [SliverGap(40), TabletWelcomeSection()]),
+      child: CustomScrollView(
+        slivers: [
+          SliverGap(40),
+          TabletWelcomeSection(),
+          SliverGap(80),
+          TabletSkillsSection(),
+          SliverGap(80),
+        ],
+      ),
     );
   }
 }
