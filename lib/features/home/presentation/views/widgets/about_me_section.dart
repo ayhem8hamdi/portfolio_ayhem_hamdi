@@ -23,7 +23,7 @@ class AboutMeSection extends StatelessWidget {
               child: SvgPicture.asset(AppAssets.mobileAboutMe),
             ),
             const Gap(25),
-            AboutMeTitle(),
+            AppTitles(firsWord: "About", secondWord: "Me"),
             Gap(20),
             Text(
               "I am Ayhem Hamdi, a Computer Science student at the Higher Institute of Computer Science Ariana. I began my development journey in June 2024, earning a Udemy certificate in Dart OOP and Flutter initiation. Since then, I have been actively working on various projects both personal and collaborative using Firebase, Supabase. Alongside Flutter development, I expanded my skills to include backend and API development using Node.js and Express, as well as learning the MERN stack (without React). I am passionate about continuously improving my expertise in clean architecture and BLoC state management, and I am always eager to take on new projects that allow me to apply and grow my technical knowledge.",
@@ -36,21 +36,25 @@ class AboutMeSection extends StatelessWidget {
   }
 }
 
-class AboutMeTitle extends StatelessWidget {
-  const AboutMeTitle({super.key});
-
+class AppTitles extends StatelessWidget {
+  const AppTitles({
+    super.key,
+    required this.firsWord,
+    required this.secondWord,
+  });
+  final String firsWord, secondWord;
   @override
   Widget build(BuildContext context) {
     final ColorScheme cs = Theme.of(context).colorScheme;
     return Row(
       children: [
         Text(
-          "About",
+          firsWord,
           style: AppStyles.style28Regular(context, color: cs.primary),
         ),
         const Gap(16),
         Text(
-          "Me",
+          secondWord,
           style: AppStyles.style28ExtraBold(context, color: cs.primary),
         ),
         const Gap(20),

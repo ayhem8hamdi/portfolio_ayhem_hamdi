@@ -21,9 +21,19 @@ class MyExperiencesSection extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("My", style: AppStyles.style28Regular(context)),
+                Text(
+                  "My",
+                  style: AppStyles.style28Regular(
+                    context,
+                  ).copyWith(color: cs.secondary),
+                ),
                 Gap(12),
-                Text("Experience", style: AppStyles.style28ExtraBold(context)),
+                Text(
+                  "Experience",
+                  style: AppStyles.style28ExtraBold(
+                    context,
+                  ).copyWith(color: cs.secondary),
+                ),
               ],
             ),
             Gap(40),
