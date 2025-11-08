@@ -203,10 +203,10 @@ double getScaleFactor(BuildContext context) {
   double width = MediaQuery.sizeOf(context).width;
 
   if (width < SizeConfig.mobileBreakPoint) {
-    return width / 825;
+    return width / 915;
   } else if (width < SizeConfig.tabletBreakPoint) {
-    return width / 1290;
+    return width / 1330;
   } else {
-    return width / 1560;
+    return width / 1640;
   }
 }

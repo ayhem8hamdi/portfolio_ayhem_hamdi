@@ -10,8 +10,8 @@ class ProjectModel {
     required this.image,
     required this.projectTitle,
     required this.projectDecription,
-    required this.youtubeLink,
-    required this.githubLink,
+    this.youtubeLink,
+    this.githubLink,
     this.linkedinLink,
   });
 }

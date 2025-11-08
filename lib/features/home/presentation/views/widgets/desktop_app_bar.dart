@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:portfolio_ayhem_hamdi/core/constants.dart';
 import 'package:portfolio_ayhem_hamdi/core/services/navigation_service.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/assets/app_assets.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/custom_button.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/app_styles.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 PreferredSizeWidget buildDesktopAppBar(BuildContext context) {
   double width = MediaQuery.of(context).size.width;
@@ -38,7 +40,7 @@ PreferredSizeWidget buildDesktopAppBar(BuildContext context) {
               text: "Resume",
               hasIcon: true,
               onPressed: () {
-                // TODO: Add your resume download or open link
+                launchResume(link: Constants.resumeLink);
               },
               icon: AppAssets.download,
             ),
@@ -77,7 +79,7 @@ class DesktopNavBar extends StatelessWidget {
               NavigationService().scrollToSection("experience", context),
         ),
         _NavItem(
-          title: "Project",
+          title: "Projects",
           color: color,
           onPressed: () =>
               NavigationService().scrollToSection("projects", context),
@@ -115,4 +117,9 @@ class _NavItem extends StatelessWidget {
       ),
     );
   }
+}
+
+void launchResume({required String link}) {
+  final websiteUri = Uri.parse(link);
+  launchUrl(websiteUri, mode: LaunchMode.externalApplication);
 }

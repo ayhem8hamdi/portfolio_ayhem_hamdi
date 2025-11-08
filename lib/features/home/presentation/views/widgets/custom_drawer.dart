@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:portfolio_ayhem_hamdi/core/constants.dart';
 import 'package:portfolio_ayhem_hamdi/core/services/navigation_service.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/assets/app_assets.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/app_styles.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -123,7 +125,7 @@ class DrawerCustomNavLinks extends StatelessWidget {
             ),
             Gap(16),
             HoverLinkText(
-              text: "Project",
+              text: "Projects",
               onPressed: () =>
                   NavigationService().scrollToSection("projects", context),
             ),
@@ -165,31 +167,42 @@ class DownloadResumeButton extends StatelessWidget {
     final cs = Theme.of(context).colorScheme;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Container(
-        decoration: BoxDecoration(
-          color: cs.primary,
-          borderRadius: BorderRadius.circular(4),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                "Resume",
-                style: AppStyles.style16SemiBold(
-                  context,
-                ).copyWith(color: cs.onPrimary),
-              ),
-              Gap(8),
-              SvgPicture.asset(
-                AppAssets.download,
-                colorFilter: ColorFilter.mode(cs.onPrimary, BlendMode.srcIn),
-              ),
-            ],
+      child: GestureDetector(
+        onTap: () => {
+          launchResume(link: Constants.resumeLink),
+          Navigator.pop(context),
+        },
+        child: Container(
+          decoration: BoxDecoration(
+            color: cs.primary,
+            borderRadius: BorderRadius.circular(4),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Resume",
+                  style: AppStyles.style16SemiBold(
+                    context,
+                  ).copyWith(color: cs.onPrimary),
+                ),
+                Gap(8),
+                SvgPicture.asset(
+                  AppAssets.download,
+                  colorFilter: ColorFilter.mode(cs.onPrimary, BlendMode.srcIn),
+                ),
+              ],
+            ),
           ),
         ),
       ),
     );
+  }
+
+  void launchResume({required String link}) {
+    final websiteUri = Uri.parse(link);
+    launchUrl(websiteUri, mode: LaunchMode.externalApplication);
   }
 }

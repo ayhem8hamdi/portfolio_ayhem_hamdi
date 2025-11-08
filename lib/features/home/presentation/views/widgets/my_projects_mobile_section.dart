@@ -4,16 +4,18 @@ import 'package:portfolio_ayhem_hamdi/core/constants.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/colors/app_colors.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/app_styles.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/domain/project_model.dart';
+import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/project_links.dart';
 
 class MyProjectsSection extends StatelessWidget {
   const MyProjectsSection({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final double width = MediaQuery.sizeOf(context).width;
     return SliverToBoxAdapter(
       child: Container(
         color: AppColors.kPrimaryColor,
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding: EdgeInsets.symmetric(horizontal: width * 0.04),
         child: Column(
           children: [
             const Gap(40),
@@ -113,17 +115,22 @@ class MobileProjectDisplayWidget extends StatelessWidget {
         ),
         const Gap(28),
         ClipRRect(
-          borderRadius: BorderRadius.circular(19),
+          borderRadius: BorderRadius.circular(16),
           child: Image.asset(projectModel.image, width: width),
         ),
 
         const Gap(28),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 8),
           child: Text(
             projectModel.projectDecription,
             style: AppStyles.style16Regular(context, color: cs.onSurface),
           ),
+        ),
+        const Gap(28),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8),
+          child: ProjectLinks(projectModel: projectModel),
         ),
         const Gap(28),
       ],

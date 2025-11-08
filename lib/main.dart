@@ -25,9 +25,6 @@ class PortfolioAyhemHamdi extends StatelessWidget {
     return BlocProvider(
       create: (_) => getIt<EmailSendCubit>(),
       child: MaterialApp(
-        useInheritedMediaQuery: true,
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme,
         home: const HomeScreen(),

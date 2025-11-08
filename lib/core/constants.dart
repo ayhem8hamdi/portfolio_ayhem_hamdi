@@ -5,6 +5,8 @@ import 'package:portfolio_ayhem_hamdi/features/home/domain/project_model.dart';
 
 abstract class Constants {
   static const String fullName = "Ayhem Hamdi.";
+  static const String resumeLink =
+      "https://drive.google.com/file/d/1zl6LOOTSmaDYHn2nC-uLnxp9bxKK4AWX/view?usp=sharing";
   static const String mainFrameWork =
       "Flutter"; // put ur main framework u are working with
   static const String state = "Developer"; // u could put developer or engineer
@@ -30,8 +32,9 @@ abstract class Constants {
     projectTitle: "Fruit-Hub",
     projectDecription:
         "A modern grocery e-commerce app built with Flutter and Supabase, designed to make shopping seamless and intuitive. It offers secure authentication through OAuth, allowing quick sign-in with Google or Facebook. Users can easily browse, add to cart, and purchase groceries with a smooth, responsive interface.",
-    youtubeLink: "youtubeLink",
-    githubLink: "githubLink",
+    linkedinLink:
+        "https://www.linkedin.com/posts/ayhem-hamdi-391a61324_flutter-mobiledevelopment-ecommerce-activity-7362045424179851264-mmN1?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFIGpt0BU8yuRGQ-8PxvVzloIbBkyOfctg0",
+    githubLink: "https://github.com/ayhem8hamdi/Fruit_Hub",
   );
 
   static const ProjectModel projet2 = ProjectModel(
@@ -39,16 +42,16 @@ abstract class Constants {
     projectTitle: "University-Chatbot",
     projectDecription:
         "An intelligent university chatbot powered by a fine-tuned model and FastAPI backend. It’s trained on real university data to provide accurate, instant answers about faculty, programs, diplomas, and more. Built to enhance student engagement and streamline information access through natural, conversational interaction.",
-    youtubeLink: "youtubeLink",
-    githubLink: "githubLink",
+
+    githubLink: "https://github.com/ayhem8hamdi/university_chatBot",
   );
   static const ProjectModel project3 = ProjectModel(
     image: AppAssets.notesApp,
     projectTitle: "Notes-App",
     projectDecription:
         "A sleek and minimalistic note-taking app built with Flutter, featuring secure local data storage powered by the Hive package. It lets users quickly jot down and organize important thoughts while enjoying a smooth, creative, and user-friendly design experience.",
-    youtubeLink: "youtubeLink",
-    githubLink: "githubLink",
+
+    githubLink: "https://github.com/ayhem8hamdi/notes-_app",
   );
 
   static const ProjectModel project4 = ProjectModel(
@@ -56,24 +59,25 @@ abstract class Constants {
     projectTitle: "BankPick",
     projectDecription:
         "BankPick is a modern finance app that enables secure transactions with cards like Visa while tracking monthly spending. It provides a detailed list of your transactions and insights into your expenses, all within a sleek interface supporting both dark and light modes.",
-    youtubeLink: "youtubeLink",
-    githubLink: "githubLink",
+    githubLink: "https://github.com/ayhem8hamdi/Banking-mobile-app",
   );
   static const ProjectModel project5 = ProjectModel(
     image: AppAssets.dashboard,
     projectTitle: "Admin-Dashboard",
     projectDecription:
         "A responsive admin dashboard featuring a creative, adaptive design that seamlessly adjusts to laptops, tablets, and mobile devices. It offers intuitive data visualization, efficient management tools, and a clean interface for smooth control and monitoring across all platforms.",
-    youtubeLink: "youtubeLink",
-    githubLink: "githubLink",
+    linkedinLink:
+        "https://www.linkedin.com/posts/ayhem-hamdi-391a61324_flutter-responsivedesign-crossplatform-activity-7336425869273354243-Urll?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFIGpt0BU8yuRGQ-8PxvVzloIbBkyOfctg0",
+    githubLink: "https://github.com/ayhem8hamdi/responsive_adaptive_dash_board",
   );
   static const ProjectModel project6 = ProjectModel(
     image: AppAssets.bookly,
     projectTitle: "Bookly",
     projectDecription:
         "Bookly is a stylish app that integrates the Google Books API to let users explore, preview, and download books easily. With its creative and intuitive design, it offers a smooth reading discovery experience and effortless access to a vast collection of titles.",
-    youtubeLink: "youtubeLink",
-    githubLink: "githubLink",
+    linkedinLink:
+        "https://www.linkedin.com/posts/ayhem-hamdi-391a61324_flutter-mvvm-mobiledevelopment-activity-7342941304722485249-vJKP?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFIGpt0BU8yuRGQ-8PxvVzloIbBkyOfctg0",
+    githubLink: "https://github.com/ayhem8hamdi/responsive_bookly",
   );
 
   static const ProjectModel project7 = ProjectModel(
@@ -81,32 +85,33 @@ abstract class Constants {
     projectTitle: "Jobs-API",
     projectDecription:
         "A robust Jobs API built with Node.js, Express.js, and MongoDB Atlas Cloud, featuring full CRUD functionality and secure authentication using JWT tokens. It includes comprehensive API documentation via Swagger UI, ensuring easy integration and efficient job management.",
-    youtubeLink: "youtubeLink",
-    githubLink: "githubLink",
+    linkedinLink:
+        "https://www.linkedin.com/posts/ayhem-hamdi-391a61324_nodejs-expressjs-mongodb-activity-7368316007259500544-tvrB?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFIGpt0BU8yuRGQ-8PxvVzloIbBkyOfctg0",
+    githubLink: "https://github.com/ayhem8hamdi/jobs-api",
   );
   static const ProjectModel project8 = ProjectModel(
     image: AppAssets.newsCloud,
     projectTitle: "News-Cloud",
     projectDecription:
         "NewsCloud is a dynamic news app powered by the News API, delivering real-time updates from trusted sources worldwide. It features a clean, modern interface that makes staying informed effortless, with live headlines and stories tailored to your interests.",
-    youtubeLink: "youtubeLink",
-    githubLink: "githubLink",
+
+    githubLink: "https://github.com/ayhem8hamdi/news_app",
   );
   static const ProjectModel project9 = ProjectModel(
     image: AppAssets.certif4C,
     projectTitle: "Certif-Booking",
     projectDecription:
         "Certif is a collaborative app developed with the university to help students easily book and manage certifications offered by the institution. It streamlines the registration process with a simple, user-friendly interface, making certification access faster and more organized.",
-    youtubeLink: "youtubeLink",
-    githubLink: "githubLink",
+
+    githubLink: "https://github.com/ayhem8hamdi/quatre_c",
   );
   static const ProjectModel project10 = ProjectModel(
     image: AppAssets.weatherApp,
     projectTitle: "Weather-App",
     projectDecription:
         "A sleek weather app powered by the Weather API, providing real-time forecasts and detailed climate updates. With its clean and intuitive design, users can easily check current conditions, track temperature changes, and plan ahead with accuracy.",
-    youtubeLink: "youtubeLink",
-    githubLink: "githubLink",
+
+    githubLink: "https://github.com/ayhem8hamdi/weather_app",
   );
 
   static const ExperienceModel exp1 = ExperienceModel(

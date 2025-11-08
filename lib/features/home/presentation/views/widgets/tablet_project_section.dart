@@ -4,6 +4,7 @@ import 'package:portfolio_ayhem_hamdi/core/constants.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/colors/app_colors.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/app_styles.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/domain/project_model.dart';
+import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/project_links.dart';
 
 class TabletMyProjectsSection extends StatelessWidget {
   const TabletMyProjectsSection({super.key});
@@ -126,8 +127,10 @@ class ProjectInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ProjectName(index: index, cs: cs, projectModel: projectModel),
-        const Gap(23),
+        const Gap(19),
         ProjectDesc(projectModel: projectModel, cs: cs),
+        const Gap(23),
+        ProjectLinks(projectModel: projectModel),
       ],
     );
   }
