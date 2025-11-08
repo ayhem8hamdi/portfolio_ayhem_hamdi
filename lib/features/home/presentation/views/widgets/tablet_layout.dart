@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:portfolio_ayhem_hamdi/core/utils/keys.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/footer_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/tablet_about_me.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/tablet_contact_me_section.dart';
@@ -19,15 +20,15 @@ class TabletLayout extends StatelessWidget {
           SliverGap(40),
           TabletWelcomeSection(),
           SliverGap(70),
-          TabletSkillsSection(),
+          TabletSkillsSection(key: skillsKey),
           SliverGap(80),
-          TabletMyExperiencesSection(),
+          TabletMyExperiencesSection(key: experienceKey),
           SliverGap(85),
-          TabletAboutMe(),
+          TabletAboutMe(key: aboutMeKey),
           SliverGap(80),
-          TabletMyProjectsSection(),
+          TabletMyProjectsSection(key: projectsKey),
           SliverGap(80),
-          TabletContactMeSection(),
+          TabletContactMeSection(key: contactKey),
           SliverGap(90),
           FooterSection(),
         ],

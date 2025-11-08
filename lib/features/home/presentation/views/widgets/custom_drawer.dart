@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:portfolio_ayhem_hamdi/core/services/navigation_service.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/assets/app_assets.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/app_styles.dart';
 
@@ -96,22 +97,42 @@ class DrawerCustomNavLinks extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SliverToBoxAdapter(
+    return SliverToBoxAdapter(
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HoverLinkText(text: "About me"),
+            HoverLinkText(
+              text: "About me",
+              onPressed: () =>
+                  NavigationService().scrollToSection("about", context),
+            ),
             Gap(16),
-            HoverLinkText(text: "Skills"),
+            HoverLinkText(
+              text: "Skills",
+              onPressed: () =>
+                  NavigationService().scrollToSection("skills", context),
+            ),
             Gap(16),
-            HoverLinkText(text: "Experience"),
+            HoverLinkText(
+              text: "Experience",
+              onPressed: () =>
+                  NavigationService().scrollToSection("experience", context),
+            ),
             Gap(16),
-            HoverLinkText(text: "Project"),
+            HoverLinkText(
+              text: "Project",
+              onPressed: () =>
+                  NavigationService().scrollToSection("projects", context),
+            ),
             Gap(16),
-            HoverLinkText(text: "Contact me"),
+            HoverLinkText(
+              text: "Contact me",
+              onPressed: () =>
+                  NavigationService().scrollToSection("contact", context),
+            ),
           ],
         ),
       ),
@@ -120,13 +141,14 @@ class DrawerCustomNavLinks extends StatelessWidget {
 }
 
 class HoverLinkText extends StatelessWidget {
-  const HoverLinkText({super.key, required this.text});
+  const HoverLinkText({super.key, required this.text, this.onPressed});
   final String text;
+  final void Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: () {},
+      onPressed: onPressed,
       child: Text(
         text,
         style: AppStyles.style16SemiBold(context).copyWith(color: Colors.black),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:portfolio_ayhem_hamdi/core/services/navigation_service.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/assets/app_assets.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/custom_button.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/app_styles.dart';
@@ -57,29 +58,56 @@ class DesktopNavBar extends StatelessWidget {
 
     return Row(
       children: [
-        _NavItem(title: "About Me", color: color),
-        _NavItem(title: "Skills", color: color),
-        _NavItem(title: "Experience", color: color),
-        _NavItem(title: "Project", color: color),
-        _NavItem(title: "Contact Me", color: color),
+        _NavItem(
+          title: "About Me",
+          color: color,
+          onPressed: () =>
+              NavigationService().scrollToSection("about", context),
+        ),
+        _NavItem(
+          title: "Skills",
+          color: color,
+          onPressed: () =>
+              NavigationService().scrollToSection("skills", context),
+        ),
+        _NavItem(
+          title: "Experience",
+          color: color,
+          onPressed: () =>
+              NavigationService().scrollToSection("experience", context),
+        ),
+        _NavItem(
+          title: "Project",
+          color: color,
+          onPressed: () =>
+              NavigationService().scrollToSection("projects", context),
+        ),
+        _NavItem(
+          title: "Contact Me",
+          color: color,
+          onPressed: () =>
+              NavigationService().scrollToSection("contact", context),
+        ),
       ],
     );
   }
 }
 
 class _NavItem extends StatelessWidget {
-  const _NavItem({required this.title, required this.color});
+  const _NavItem({
+    required this.title,
+    required this.color,
+    required this.onPressed,
+  });
   final String title;
   final Color color;
-
+  final void Function() onPressed;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: TextButton(
-        onPressed: () {
-          // TODO: Add scroll or navigation logic
-        },
+        onPressed: onPressed,
         child: Text(
           title,
           style: AppStyles.style16SemiBold(context, color: color),

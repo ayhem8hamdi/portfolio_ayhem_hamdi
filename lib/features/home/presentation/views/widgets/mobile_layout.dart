@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:portfolio_ayhem_hamdi/core/utils/keys.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/about_me_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/contact_me_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/experience_section.dart';
@@ -19,14 +20,14 @@ class MobileLayout extends StatelessWidget {
           SliverGap(40),
           MobileWelcomSection(),
           SliverGap(60),
-          SkillsSection(),
+          SkillsSection(key: skillsKey),
           SliverGap(40),
-          MyExperiencesSection(),
-          AboutMeSection(),
+          MyExperiencesSection(key: experienceKey),
+          AboutMeSection(key: aboutMeKey),
           SliverGap(40),
-          MyProjectsSection(),
+          MyProjectsSection(key: projectsKey),
           SliverGap(40),
-          ContactMeSection(),
+          ContactMeSection(key: contactKey),
           FooterSection(),
         ],
       ),
