@@ -66,7 +66,7 @@ class LoadingButton extends StatelessWidget {
     return TextButton(
       onPressed: null,
       style: TextButton.styleFrom(
-        padding: const EdgeInsets.symmetric(horizontal: 43),
+        padding: const EdgeInsets.symmetric(horizontal: 43.5),
         backgroundColor: Theme.of(context).colorScheme.primary,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
       ),

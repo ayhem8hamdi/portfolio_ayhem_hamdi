@@ -1,20 +1,45 @@
 import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/custom_text_field.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/methods_helper.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/manager/email_send_cubit/email_send_cubit.dart';
+import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/contact_me.dart'
+    show ContactInfo;
+import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/mobile_social_contact_section.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/presentation/views/widgets/send_email_button_bloc_consumer.dart';
 
-class GetInTouchForm extends StatefulWidget {
-  const GetInTouchForm({super.key});
+class TabletContactMeSection extends StatelessWidget {
+  const TabletContactMeSection({super.key});
 
   @override
-  State<GetInTouchForm> createState() => _GetInTouchFormState();
+  Widget build(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width;
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: width * 0.04),
+        child: Row(
+          children: [
+            Expanded(child: TabletGetInTouchForm()),
+            Gap(55),
+            Expanded(child: ContactInfo()),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
-class _GetInTouchFormState extends State<GetInTouchForm> {
+class TabletGetInTouchForm extends StatefulWidget {
+  const TabletGetInTouchForm({super.key});
+
+  @override
+  State<TabletGetInTouchForm> createState() => _TabletGetInTouchFormState();
+}
+
+class _TabletGetInTouchFormState extends State<TabletGetInTouchForm> {
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
   final _emailController = TextEditingController();
@@ -36,7 +61,7 @@ class _GetInTouchFormState extends State<GetInTouchForm> {
       final name = _nameController.text.trim();
       final subject = _subjectController.text.trim();
       final help = _helpController.text.trim();
-
+      //send notif logic from cubit
       log("Sending email: $email & $name & $subject & $help");
 
       context.read<EmailSendCubit>().sendEmail(
@@ -79,8 +104,8 @@ class _GetInTouchFormState extends State<GetInTouchForm> {
             validator: (value) => MethodsHelper.validateHelp(value),
           ),
           const Gap(20),
+
           Row(
-            mainAxisSize: MainAxisSize.min,
             children: [
               SendEmailButtonBlocConsumer(
                 getInTouch: _getInTouchPressed,
@@ -88,6 +113,14 @@ class _GetInTouchFormState extends State<GetInTouchForm> {
                 emailController: _emailController,
                 helpController: _helpController,
                 subjectController: _subjectController,
+              ),
+
+              Gap(32),
+              Flexible(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: CustomContactIconRow(gap: 19),
+                ),
               ),
             ],
           ),
