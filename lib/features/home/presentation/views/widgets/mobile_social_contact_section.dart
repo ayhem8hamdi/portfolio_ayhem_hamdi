@@ -78,7 +78,7 @@ class CustomContactIconRow extends StatelessWidget {
 
   void socialMediaRedirectMethod({required String link}) {
     final websiteUri = Uri.parse(link);
-    launchUrl(websiteUri, mode: LaunchMode.externalApplication);
+    launchUrl(websiteUri, mode: LaunchMode.platformDefault);
   }
 }
 

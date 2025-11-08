@@ -1,19 +1,21 @@
 import 'dart:convert';
 import 'dart:developer';
-
 import 'package:http/http.dart' as http;
 
 class EmailService {
-  static sendEmail({
+  /// Sends an email via EmailJS and returns true if successful
+  static Future<bool> sendEmail({
     required String name,
     required String email,
     required String subject,
     required String message,
   }) async {
-    var endPointUrl = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
+    final endPointUrl = Uri.parse(
+      'https://api.emailjs.com/api/v1.0/email/send',
+    );
 
     try {
-      var response = await http.post(
+      final response = await http.post(
         endPointUrl,
         headers: {'Content-Type': 'application/json'},
         body: json.encode({
@@ -30,10 +32,15 @@ class EmailService {
       );
 
       if (response.statusCode == 200) {
-        log(response.body);
+        log('Email sent successfully: ${response.body}');
+        return true;
+      } else {
+        log('Failed to send email: ${response.statusCode} -> ${response.body}');
+        return false;
       }
     } on Exception catch (e) {
-      log(e.toString());
+      log('Exception sending email: $e');
+      return false;
     }
   }
 }

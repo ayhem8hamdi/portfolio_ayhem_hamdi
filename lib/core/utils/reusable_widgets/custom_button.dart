@@ -57,3 +57,33 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
+
+class LoadingButton extends StatelessWidget {
+  const LoadingButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return TextButton(
+      onPressed: null,
+      style: TextButton.styleFrom(
+        padding: const EdgeInsets.symmetric(horizontal: 43),
+        backgroundColor: Theme.of(context).colorScheme.primary,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 9),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
+              child: Center(
+                child: CircularProgressIndicator(color: Colors.white),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
