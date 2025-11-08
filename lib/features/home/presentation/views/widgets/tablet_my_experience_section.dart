@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:portfolio_ayhem_hamdi/core/utils/assets/app_assets.dart';
+import 'package:portfolio_ayhem_hamdi/core/constants.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/reusable_widgets/adaptive_image.dart';
-import 'package:portfolio_ayhem_hamdi/core/utils/theme/colors/app_colors.dart';
 import 'package:portfolio_ayhem_hamdi/core/utils/theme/styles/app_styles.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/domain/experience_model.dart';
 
@@ -47,24 +46,7 @@ class TabletMyExperiencesSection extends StatelessWidget {
 
 class TabletExperienceListBuilder extends StatelessWidget {
   const TabletExperienceListBuilder({super.key});
-  static final List<ExperienceModel> l = [
-    ExperienceModel(
-      image: AppAssets.freelance,
-      expTitle: "Independent Freelancer",
-      expDesc:
-          "In 2024, I began my freelance journey, working with clients worldwide to bring their ideas to life. I develop mobile apps and custom solutions across various categories, with a steadfast focus on quality, functionality, and user experience. My passion is creating impactful applications that consistently exceed expectations.",
-      color: AppColors.kPrimaryColor,
-      expDate: "2024-Present",
-    ),
-    ExperienceModel(
-      image: AppAssets.codexLogo2,
-      expTitle: "Flutter Senior",
-      expDesc:
-          "In 2024, I began my freelance journey, working with clients worldwide to bring their ideas to life. I develop mobile apps and custom solutions across various categories, with a steadfast focus on quality, functionality, and user experience. My passion is creating impactful applications that consistently exceed expectations.",
-      color: AppColors.kPrimaryColor,
-      expDate: "2024-Present",
-    ),
-  ];
+  static final List<ExperienceModel> l = [Constants.exp1, Constants.exp2];
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -101,7 +83,7 @@ class TabletExperienceItem extends StatelessWidget {
               children: [
                 AdaptiveImage(
                   assetPath: experienceModel.image,
-                  imageDesignWidth: 32,
+                  imageDesignWidth: 36,
 
                   imageDesignAspectRatio: 1,
                 ),

@@ -1,4 +1,6 @@
 import 'package:portfolio_ayhem_hamdi/core/utils/assets/app_assets.dart';
+import 'package:portfolio_ayhem_hamdi/core/utils/theme/colors/app_colors.dart';
+import 'package:portfolio_ayhem_hamdi/features/home/domain/experience_model.dart';
 import 'package:portfolio_ayhem_hamdi/features/home/domain/project_model.dart';
 
 abstract class Constants {
@@ -12,6 +14,14 @@ abstract class Constants {
   static const String aboutMeText =
       "I am Ayhem Hamdi, a Computer Science student at the Higher Institute of Computer Science Ariana. I began my development journey in June 2024, earning a Udemy certificate in Dart OOP and Flutter initiation. Since then, I have been actively working on various projects both personal and collaborative using Firebase, Supabase. Alongside Flutter development, I expanded my skills to include backend and API development using Node.js and Express, as well as learning the MERN stack (without React). I am passionate about continuously improving my expertise in clean architecture and BLoC state management, and I am always eager to take on new projects that allow me to apply and grow my technical knowledge.";
 
+  static const String linkedInProfile =
+      "https://www.linkedin.com/in/ayhem-hamdi-391a61324/";
+
+  static const String githubProfile = "https://github.com/ayhem8hamdi";
+  static const String facebookProfile =
+      "https://www.facebook.com/ayhem.hamdi.3785/";
+  static const String instagramProfile =
+      "https://www.instagram.com/_ayhemhamdi5_/";
   //project Model is a class in which u find attributs like project name , project Description , project image etc so change all project with your data and
   //if u have less or more project no problem because its a list builder and it has no a specefic number of item
 
@@ -97,5 +107,23 @@ abstract class Constants {
         "A sleek weather app powered by the Weather API, providing real-time forecasts and detailed climate updates. With its clean and intuitive design, users can easily check current conditions, track temperature changes, and plan ahead with accuracy.",
     youtubeLink: "youtubeLink",
     githubLink: "githubLink",
+  );
+
+  static const ExperienceModel exp1 = ExperienceModel(
+    image: AppAssets.freelance,
+    expTitle: "Independent Freelancer",
+    expDesc:
+        "In 2024, I began my freelance journey, working with clients worldwide to bring their ideas to life. I develop mobile apps and custom solutions across various categories, with a steadfast focus on quality, functionality, and user experience. My passion is creating impactful applications that consistently exceed expectations.",
+    color: AppColors.kPrimaryColor,
+    expDate: "2024-Present",
+  );
+
+  static const ExperienceModel exp2 = ExperienceModel(
+    image: AppAssets.codexLogo2,
+    expTitle: "Senior Flutter Developer ",
+    expDesc:
+        "Worked with Codex Junior Enterprise on real-world projects using Scrum methodology in a collaborative team environment. Designed and developed user-friendly Flutter UIs, integrated REST APIs, and contributed to backend development using Node.js. This experience enhanced my technical expertise, teamwork, and ability to deliver high-quality, scalable applications.",
+    color: AppColors.kPrimaryColor,
+    expDate: "2024-Present",
   );
 }
