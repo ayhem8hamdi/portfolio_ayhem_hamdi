@@ -21,7 +21,7 @@ class MobileLayoutWelcomeText extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Hello I'am",
+                  "Hello I am",
                   style: AppStyles.style28Regular(context, color: cs.primary),
                 ),
                 const Gap(16),

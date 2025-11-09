@@ -15,7 +15,7 @@ class TabletWelcomeText extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hello I'am",
+              "Hello I am",
               style: AppStyles.style48Regular(
                 context,
                 color: Theme.of(context).colorScheme.primary,
