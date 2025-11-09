@@ -6,7 +6,7 @@ import 'package:portfolio_ayhem_hamdi/features/home/domain/project_model.dart';
 abstract class Constants {
   static const String fullName = "Ayhem Hamdi.";
   static const String resumeLink =
-      "https://drive.google.com/file/d/1zl6LOOTSmaDYHn2nC-uLnxp9bxKK4AWX/view?usp=sharing";
+      "https://drive.google.com/file/d/1wNshmutADe-BwxWjgEiO3SSLqz0yojA3/view?usp=sharing";
   static const String mainFrameWork =
       "Flutter"; // put ur main framework u are working with
   static const String state = "Developer"; // u could put developer or engineer
