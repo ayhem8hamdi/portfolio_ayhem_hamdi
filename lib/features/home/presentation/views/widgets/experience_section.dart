@@ -21,16 +21,29 @@ class MyExperiencesSection extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  "My",
-                  style: AppStyles.style48Regular(context, color: cs.secondary),
+                Flexible(
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      "My",
+                      style: AppStyles.style48Regular(
+                        context,
+                        color: cs.secondary,
+                      ),
+                    ),
+                  ),
                 ),
                 Gap(12),
-                Text(
-                  "Experience",
-                  style: AppStyles.style48ExtraBold(
-                    context,
-                    color: cs.secondary,
+                Flexible(
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      "Experience",
+                      style: AppStyles.style48ExtraBold(
+                        context,
+                        color: cs.secondary,
+                      ),
+                    ),
                   ),
                 ),
               ],
@@ -69,6 +82,7 @@ class ExperienceItem extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Container(
+        width: MediaQuery.sizeOf(context).width,
         margin: EdgeInsets.only(bottom: 25),
         padding: EdgeInsets.symmetric(horizontal: 24, vertical: 30),
         decoration: BoxDecoration(
@@ -87,12 +101,17 @@ class ExperienceItem extends StatelessWidget {
                   imageDesignAspectRatio: 1,
                 ),
                 Gap(16),
-                Text(
-                  experienceModel.expTitle,
-
-                  style: AppStyles.style24SemiBold(
-                    context,
-                  ).copyWith(color: cs.secondary),
+                Flexible(
+                  child: FittedBox(
+                    fit: BoxFit.scaleDown,
+                    child: Text(
+                      experienceModel.expTitle,
+                      softWrap: true,
+                      style: AppStyles.style24SemiBold(
+                        context,
+                      ).copyWith(color: cs.secondary),
+                    ),
+                  ),
                 ),
               ],
             ),
