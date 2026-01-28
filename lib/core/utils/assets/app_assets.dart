@@ -5,6 +5,7 @@ abstract class AppAssets {
   static const String aboutMe = '${_imagesBasePath}about_me.svg';
   static const String android = '${_imagesBasePath}android.svg';
   static const String banner = '${_imagesBasePath}Banner.png';
+  static const String n8n = '${_imagesBasePath}n8n.svg';
   static const String cubit = '${_imagesBasePath}cubit.svg';
   static const String dart = '${_imagesBasePath}dart.svg';
   static const String expressJs = '${_imagesBasePath}expressjs.svg';
@@ -27,6 +28,7 @@ abstract class AppAssets {
   static const String newsCloud = '${_imagesBasePath}news_cloud_banner.png';
   static const String jobsApi = '${_imagesBasePath}jobs_api_banner.png';
   static const String fruitHub = '${_imagesBasePath}fruit_hub_banner.png';
+  static const String inboxiq = '${_imagesBasePath}inbox_iq_banner.png';
   static const String codexLogo1 = '${_imagesBasePath}codex_logo_1.png';
   static const String codexLogo2 = '${_imagesBasePath}codex_logo_2.png';
   static const String chatbot = '${_imagesBasePath}chatbot_banner.png';

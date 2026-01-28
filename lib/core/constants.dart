@@ -26,7 +26,15 @@ abstract class Constants {
       "https://www.instagram.com/_ayhemhamdi5_/";
   //project Model is a class in which u find attributs like project name , project Description , project image etc so change all project with your data and
   //if u have less or more project no problem because its a list builder and it has no a specefic number of item
-
+  static const ProjectModel projet0 = ProjectModel(
+    image: AppAssets.inboxiq,
+    projectTitle: "Inbox-IQ",
+    projectDecription:
+        "InboxIQ: An AI-powered email assistant built with Flutter and n8n. Automatically summarizes, classifies, and drafts emails from voice input using Groq Whisper. Edit and send emails directly in the app, with smooth caching, pull-to-refresh, and a responsive UX for effortless email management.",
+    linkedinLink:
+        "https://www.linkedin.com/feed/update/urn:li:activity:7421193317524283392/",
+    githubLink: "https://github.com/ayhem8hamdi/mail_summarizer",
+  );
   static const ProjectModel projet1 = ProjectModel(
     image: AppAssets.fruitHub,
     projectTitle: "Fruit-Hub",

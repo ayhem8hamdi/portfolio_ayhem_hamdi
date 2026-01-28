@@ -35,6 +35,7 @@ class TabletSkillGrid extends StatelessWidget {
     SkillModel(skillImage: AppAssets.expressJs, skillName: "Express JS"),
     SkillModel(skillImage: AppAssets.swagger, skillName: "Swagger"),
     SkillModel(skillImage: AppAssets.java, skillName: "Java"),
+    SkillModel(skillImage: AppAssets.n8n, skillName: "n8n"),
   ];
 
   @override

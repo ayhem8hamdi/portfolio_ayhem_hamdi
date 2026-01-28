@@ -49,6 +49,7 @@ class TabletMyProjectsSection extends StatelessWidget {
 class TabletProjectsListBuilder extends StatelessWidget {
   const TabletProjectsListBuilder({super.key});
   static final List<ProjectModel> l = [
+    Constants.projet0,
     Constants.projet1,
     Constants.projet2,
     Constants.project3,
